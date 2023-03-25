@@ -8761,7 +8761,7 @@
             let component = issue_title.match(/\[(\w+)\]/i);
             if (!component) {
                 console.error('没有在issue的title中找到组件');
-                return [1];
+                return [];
             }
             //纯字母
             component = component[1].toLocaleLowerCase().replaceAll('-', '');
@@ -8769,13 +8769,13 @@
             let componentData = data.find(n => n.name.toLocaleLowerCase().replaceAll('-', '') === component);
             if (!componentData) {
                 console.log('没有在list中找到对应name: ' + component, data)
-                return [2];
+                return [];
             }
 
-            const taskName = project_name.replace('tdesign-', '').replace('mobile-', '').replace('miniprogram', 'wx');
+            // const taskName = project_name.replace('tdesign-', '').replace('mobile-', '').replace('miniprogram', 'wx');
 
-            componentData = componentData.tasks.find(n => n.name === taskName)
-            if (!componentData) return [3];
+            componentData = componentData.tasks.find(n => n.name === component)
+            if (!componentData) return [];
     
             return componentData.contributors;
 
