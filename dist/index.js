@@ -8764,9 +8764,9 @@
                 return [];
             }
             //纯字母
-            component = component[1].toLocaleLowerCase().replaceAll('-', '');
+            component = component[1].toLocaleLowerCase();
     
-            let componentData = data.find(n => n.name.toLocaleLowerCase().replaceAll('-', '') === component);
+            let componentData = data.find(n => n.name.toLocaleLowerCase() === component);
             if (!componentData) {
                 console.log('没有在list中找到对应name: ' + component, data)
                 return [];
@@ -8774,7 +8774,7 @@
 
             // const taskName = project_name.replace('tdesign-', '').replace('mobile-', '').replace('miniprogram', 'wx');
 
-            componentData = componentData.tasks.find(n => n.name === component)
+            componentData = componentData.tasks.find(n => n.name.toLocaleLowerCase() === component)
             if (!componentData) return [];
     
             return componentData.contributors;
