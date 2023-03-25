@@ -8751,6 +8751,8 @@
         //     }]
         // }
 
+        let isissue = false
+
     const generatorContributors = async (project_name, issue_title) => {
         if (ReposMap[project_name].type === 'isComponent') {
             // const { device } = ReposMap[project_name];
@@ -8776,6 +8778,10 @@
 
             componentData = componentData.tasks.find(n => n.name.toLocaleLowerCase() === component)
             if (!componentData) return [];
+            //提交新功能，回复的内容不一样
+            if (component === 'issue') {
+                isissue = true
+            }
     
             return componentData.contributors;
 
@@ -8789,6 +8795,7 @@
     generatorContributors(project_name, issue_title).then(data => {
         console.log(data);
         core.setOutput("contributors", data.join(','));
+        core.setOutput("isissue", isissue);
     }).catch(err => {
         console.log(err)
         core.setFailed("contributors", err);
