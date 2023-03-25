@@ -8780,12 +8780,12 @@
                 return ["wesleyyy"];
             }
     
-            // return componentData.contributors;
             return componentData.contributors;
-        
-            // return ["wesleyyy"];
-    }
-
+        }
+        // return ["wesleyyy"];
+    // }
+    
+    
      (project_name, issue_title).then(data => {
         console.log(data);
         core.setOutput("contributors", data.join(','));
