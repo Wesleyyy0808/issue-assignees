@@ -8754,11 +8754,7 @@
     //             "_id":"1",
     //             "project":"all",
     //             "data":
-                '[{\"name\":\"QD\",\"fullName\":\"前端\",\"tasks\":[{\"name\":\"all\",\"fullName\":\"前端全部项目\",\"contributors\":[\"wesleyyy\"]}]},
-                    // {\"name\":\"HD\",\"fullName\":\"后端\",\"tasks\":[{\"name\":\"all\",\"fullName\":\"后端全部项目\",\"contributors\":[\"ddos-ling\"]}]},
-                    {\"name\":\"issue\",\"fullName\":\"issue\",\"tasks\":[{\"name\":\"issue\",\"fullName\":\"issue\",\"contributors\":[\"wesleyyy\",\"ddos-ling\"]}]},
-                    {\"name\":\"bug\",\"fullName\":\"bug\",\"tasks\":[{\"name\":\"bug\",\"fullName\":\"bug\",\"contributors\":[\"wesleyyy\",\"ddos-ling\"]}]},
-                    {\"name\":\"PR\",\"fullName\":\"pr\",\"tasks\":[{\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy\"]}]}]'
+                '[{\"name\":\"QD\",\"fullName\":\"前端\",\"tasks\":[{\"name\":\"all\",\"fullName\":\"前端全部项目\",\"contributors\":[\"wesleyyy\"]}]},{\"name\":\"HD\",\"fullName\":\"后端\",\"tasks\":[{\"name\":\"all\",\"fullName\":\"后端全部项目\",\"contributors\":[\"ddos-ling\"]}]},{\"name\":\"issue\",\"fullName\":\"issue\",\"tasks\":[{\"name\":\"issue\",\"fullName\":\"issue\",\"contributors\":[\"wesleyyy\",\"ddos-ling\"]}]},{\"name\":\"bug\",\"fullName\":\"bug\",\"tasks\":[{\"name\":\"bug\",\"fullName\":\"bug\",\"contributors\":[\"wesleyyy\",\"ddos-ling\"]}]},{\"name\":\"PR\",\"fullName\":\"pr\",\"tasks\":[{\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy\"]}]}]'
         //     }]
         // }
 
