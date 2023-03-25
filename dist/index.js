@@ -8779,9 +8779,10 @@
                 console.log('没有在list中找到对应name: ' + component, data)
                 return [];
             }
+
     
             // return componentData.contributors;
-            return ["wesley"];
+            return ["wesleyyy"];
         }
         return [];
     // }
