@@ -8769,7 +8769,7 @@
             let component = issue_title.match(/\[(\w+)\]/i);
             if (!component) {
                 console.error('没有在issue的title中找到组件');
-                return ["wesleyyy"];
+                return [];
             }
             //纯字母
             component = component[1].toLocaleLowerCase().replaceAll('-', '');
@@ -8777,12 +8777,12 @@
             let componentData = data.find(n => n.name.toLocaleLowerCase().replaceAll('-', '') === component);
             if (!componentData) {
                 console.log('没有在list中找到对应name: ' + component, data)
-                return ["wesleyyy"];
+                return [];
             }
     
             return componentData.contributors;
         }
-        // return ["wesleyyy"];
+        return [];
     // }
     
     
