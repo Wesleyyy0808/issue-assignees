@@ -8720,14 +8720,14 @@
             type: 'isComponent',
             device: 'web',
         },
-        "wesleyyy": {
+        "wesleyyy0808": {
             type: 'isDefault',
-            owner: 'wesleyyy',
+            owner: 'wesleyyy0808',
         },
     }
     
     const getContributorsFromWuji = async (device) => {
-        return JSON.parse('[{\"name\":\"QD\",\"fullName\":\"前端\",\"tasks\":[{\"name\":\"all\",\"fullName\":\"前端全部项目\",\"contributors\":[\"wesleyyy\"]}]},{\"name\":\"HD\",\"fullName\":\"后端\",\"tasks\":[{\"name\":\"all\",\"fullName\":\"后端全部项目\",\"contributors\":[\"ddos-ling\"]}]},{\"name\":\"issue\",\"fullName\":\"issue\",\"tasks\":[{\"name\":\"issue\",\"fullName\":\"issue\",\"contributors\":[\"wesleyyy\",\"ddos-ling\"]}]},{\"name\":\"bug\",\"fullName\":\"bug\",\"tasks\":[{\"name\":\"bug\",\"fullName\":\"bug\",\"contributors\":[\"wesleyyy\",\"ddos-ling\"]}]},{\"name\":\"PR\",\"fullName\":\"pr\",\"tasks\":[{\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy\"]}]}]')
+        return JSON.parse('[{\"name\":\"QD\",\"fullName\":\"前端\",\"tasks\":[{\"name\":\"all\",\"fullName\":\"前端全部项目\",\"contributors\":[\"wesleyyy0808\"]}]},{\"name\":\"HD\",\"fullName\":\"后端\",\"tasks\":[{\"name\":\"all\",\"fullName\":\"后端全部项目\",\"contributors\":[\"ddos-ling\"]}]},{\"name\":\"issue\",\"fullName\":\"issue\",\"tasks\":[{\"name\":\"issue\",\"fullName\":\"issue\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}]},{\"name\":\"bug\",\"fullName\":\"bug\",\"tasks\":[{\"name\":\"bug\",\"fullName\":\"bug\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}]},{\"name\":\"PR\",\"fullName\":\"pr\",\"tasks\":[{\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy0808\"]}]}]')
         // return fetch('https://v.qq.com/cache/wuji_public/object?appid=_xy_tdesign&schemaid=contributor&schemakey=5d5bd1cc53f3489b90e7f0280c00368b').then(reponse => {
         //     return reponse.json();
         // }).then(res => {
@@ -8744,10 +8744,10 @@
     //             "project":"all",
     //             "data":
                 // '[{\"name\":\"QD\",\"fullName\":\"前端\",\"tasks\":[
-                    // {\"name\":\"all\",\"fullName\":\"前端全部项目\",\"contributors\":[\"wesleyyy\"]}]},
+                    // {\"name\":\"all\",\"fullName\":\"前端全部项目\",\"contributors\":[\"wesleyyy0808\"]}]},
                     // {\"name\":\"HD\",\"fullName\":\"后端\",\"tasks\":[
                     //     {\"name\":\"all\",\"fullName\":\"后端全部项目\",\"contributors\":[\"ddos-ling\"]}]},
-                    //     {\"name\":\"issue\",\"fullName\":\"issue\",\"tasks\":[{\"name\":\"issue\",\"fullName\":\"issue\",\"contributors\":[\"wesleyyy\",\"ddos-ling\"]}]},{\"name\":\"bug\",\"fullName\":\"bug\",\"tasks\":[{\"name\":\"bug\",\"fullName\":\"bug\",\"contributors\":[\"wesleyyy\",\"ddos-ling\"]}]},{\"name\":\"PR\",\"fullName\":\"pr\",\"tasks\":[{\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy\"]}]}]'
+                    //     {\"name\":\"issue\",\"fullName\":\"issue\",\"tasks\":[{\"name\":\"issue\",\"fullName\":\"issue\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}]},{\"name\":\"bug\",\"fullName\":\"bug\",\"tasks\":[{\"name\":\"bug\",\"fullName\":\"bug\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}]},{\"name\":\"PR\",\"fullName\":\"pr\",\"tasks\":[{\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy0808\"]}]}]'
         //     }]
         // }
 
@@ -8756,7 +8756,7 @@
             // const { device } = ReposMap[project_name];
             // const data = await getContributorsFromWuji(device);
             // const data = await getContributorsFromWuji();\
-            const data = JSON.parse('[{\"name\":\"QD\",\"fullName\":\"前端\",\"tasks\":[{\"name\":\"QD\",\"fullName\":\"前端全部项目\",\"contributors\":[\"wesleyyy\"]}]},{\"name\":\"HD\",\"fullName\":\"后端\",\"tasks\":[{\"name\":\"HD\",\"fullName\":\"后端全部项目\",\"contributors\":[\"ddos-ling\"]}]},{\"name\":\"issue\",\"fullName\":\"issue\",\"tasks\":[{\"name\":\"issue\",\"fullName\":\"issue\",\"contributors\":[\"wesleyyy\",\"ddos-ling\"]}]},{\"name\":\"bug\",\"fullName\":\"bug\",\"tasks\":[{\"name\":\"bug\",\"fullName\":\"bug\",\"contributors\":[\"wesleyyy\",\"ddos-ling\"]}]},{\"name\":\"PR\",\"fullName\":\"pr\",\"tasks\":[{\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy\"]}]}]')
+            const data = JSON.parse('[{\"name\":\"QD\",\"fullName\":\"前端\",\"tasks\":[{\"name\":\"QD\",\"fullName\":\"前端全部项目\",\"contributors\":[\"wesleyyy0808\"]}]},{\"name\":\"HD\",\"fullName\":\"后端\",\"tasks\":[{\"name\":\"HD\",\"fullName\":\"后端全部项目\",\"contributors\":[\"ddos-ling\"]}]},{\"name\":\"issue\",\"fullName\":\"issue\",\"tasks\":[{\"name\":\"issue\",\"fullName\":\"issue\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}]},{\"name\":\"bug\",\"fullName\":\"bug\",\"tasks\":[{\"name\":\"bug\",\"fullName\":\"bug\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}]},{\"name\":\"PR\",\"fullName\":\"pr\",\"tasks\":[{\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy0808\"]}]}]')
             //截取issue title中的[]的内容
             let component = issue_title.match(/\[(\w+)\]/i);
             if (!component) {
@@ -8780,9 +8780,9 @@
             return componentData.contributors;
 
         }else if (ReposMap[project_name].type === 'isDefault') {
-            return ReposMap["wesleyyy"].owner;
+            return ReposMap["wesleyyy0808"].owner;
         }
-        return ReposMap["wesleyyy"].owner
+        return ReposMap["wesleyyy0808"].owner
     }
     
     
