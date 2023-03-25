@@ -8716,25 +8716,9 @@
     
     
     const ReposMap = {
-        "tdesign-vue": {
+        "MTB-Equipment-Management-System": {
             type: 'isComponent',
             device: 'web',
-        },
-        "tdesign-vue-next": {
-            type: 'isComponent',
-            device: 'web',
-        },
-        "tdesign-react": {
-            type: 'isComponent',
-            device: 'web',
-        },
-        "tdesign-mobile-vue": {
-            type: 'isComponent',
-            device: 'mobile',
-        },
-        "tdesign-miniprogram": {
-            type: 'isComponent',
-            device: 'miniprogram',
         },
         "wesleyyy": {
             type: 'isDefault',
