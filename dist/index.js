@@ -8802,7 +8802,7 @@
     }
     
     
-     (project_name, issue_title).then(data => {
+    generatorContributors(project_name, issue_title).then(data => {
         console.log(data);
         core.setOutput("contributors", data.join(','));
     }).catch(err => {
