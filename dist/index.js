@@ -8751,7 +8751,7 @@
         //     }]
         // }
 
-        let isissue = false
+        let isissue = 'false'
 
     const generatorContributors = async (project_name, issue_title) => {
         if (ReposMap[project_name].type === 'isComponent') {
@@ -8780,7 +8780,7 @@
             if (!componentData) return [];
             //提交新功能，回复的内容不一样
             if (component === 'issue') {
-                isissue = true
+                isissue = 'true'
             }
     
             return componentData.contributors;
