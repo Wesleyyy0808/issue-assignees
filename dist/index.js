@@ -8768,7 +8768,7 @@
         // if (ReposMap[project_name].type === 'isComponent') {
             // const { device } = ReposMap[project_name];
             // const data = await getContributorsFromWuji(device);
-            const data = ran_result
+            const data = ran_result.toString()
             //截取issue title中的[]的内容
             let component = issue_title.match(/\[(\w+)\]/i);
             if (!component) {
