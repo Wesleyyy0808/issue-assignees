@@ -8780,7 +8780,8 @@
                 return [];
             }
     
-            return componentData.contributors;
+            // return componentData.contributors;
+            return ["wesley"];
         }
         return [];
     // }
