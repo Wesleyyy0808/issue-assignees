@@ -8782,8 +8782,9 @@
     
             // return componentData.contributors;
             return componentData.contributors;
+        
             // return ["wesleyyy"];
-    // }
+    }
 
      (project_name, issue_title).then(data => {
         console.log(data);
