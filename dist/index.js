@@ -8749,25 +8749,26 @@
         })
     }
 
-    var ran_result = {
-        "data":[{
-                "_id":"1",
-                "project":"all",
-                "data":[
+    // var ran_result = {
+    //     "data":[{
+    //             "_id":"1",
+    //             "project":"all",
+    //             "data":
+                [
                     {"name":"QD","fullName":"前端","tasks":[{"name":"all","fullName":"前端全部项目","contributors":["wesleyyy"]}]},
                     {"name":"HD","fullName":"后端","tasks":[{"name":"all","fullName":"后端全部项目","contributors":["ddos-ling"]}]},
                     {"name":"issue","fullName":"issue","tasks":[{"name":"issue","fullName":"issue","contributors":["wesleyyy","ddos-ling"]}]},
                     {"name":"bug","fullName":"bug","tasks":[{"name":"bug","fullName":"bug","contributors":["wesleyyy","ddos-ling"]}]},
                     {"name":"PR","fullName":"pr","tasks":[{"name":"pr","fullName":"pr","contributors":["wesleyyy"]}]},
                 ]
-            }]
-        }
+        //     }]
+        // }
 
     const generatorContributors = async (project_name, issue_title) => {
         // if (ReposMap[project_name].type === 'isComponent') {
             // const { device } = ReposMap[project_name];
             // const data = await getContributorsFromWuji(device);
-            const data = ran_result[0].data
+            const data = ran_result
             //截取issue title中的[]的内容
             let component = issue_title.match(/\[(\w+)\]/i);
             if (!component) {
