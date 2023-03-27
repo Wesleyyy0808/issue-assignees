@@ -8764,13 +8764,13 @@
                     {\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy0808\"]}
                 ]},
                 {\"name\":\"前端需求\",\"fullName\":\"QD需求\",\"tasks\":[
-                    {\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy0808\"]}
+                    {\"name\":\"前端需求\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy0808\"]}
                 ]},
                 {\"name\":\"后端需求\",\"fullName\":\"HD需求\",\"tasks\":[
-                    {\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"ddos-ling\"]}
+                    {\"name\":\"后端需求\",\"fullName\":\"pr\",\"contributors\":[\"ddos-ling\"]}
                 ]},
                 {\"name\":\"需求\",\"fullName\":\"QD需求\",\"tasks\":[
-                    {\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}
+                    {\"name\":\"需求\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}
                 ]}
             ]`
             const data = JSON.parse(ranlist)
