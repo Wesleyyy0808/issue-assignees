@@ -8726,43 +8726,59 @@
         },
     }
     
-    const getContributorsFromWuji = async (device) => {
-        return JSON.parse('[{\"name\":\"QD\",\"fullName\":\"前端\",\"tasks\":[{\"name\":\"all\",\"fullName\":\"前端全部项目\",\"contributors\":[\"wesleyyy0808\"]}]},{\"name\":\"HD\",\"fullName\":\"后端\",\"tasks\":[{\"name\":\"all\",\"fullName\":\"后端全部项目\",\"contributors\":[\"ddos-ling\"]}]},{\"name\":\"issue\",\"fullName\":\"issue\",\"tasks\":[{\"name\":\"issue\",\"fullName\":\"issue\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}]},{\"name\":\"bug\",\"fullName\":\"bug\",\"tasks\":[{\"name\":\"bug\",\"fullName\":\"bug\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}]},{\"name\":\"PR\",\"fullName\":\"pr\",\"tasks\":[{\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy0808\"]}]}]')
-        // return fetch('https://v.qq.com/cache/wuji_public/object?appid=_xy_tdesign&schemaid=contributor&schemakey=5d5bd1cc53f3489b90e7f0280c00368b').then(reponse => {
-        //     return reponse.json();
-        // }).then(res => {
-        //     return JSON.parse(res.data.find(n => n.project === device).data);
-        // }).catch(res => {
-        //     console.log('没有找到' + device + '在wuji', res)
-        //     return null
-        // })
-    }
+    // const getContributorsFromWuji = async (device) => {
+    //     return JSON.parse('[{\"name\":\"QD\",\"fullName\":\"前端\",\"tasks\":[{\"name\":\"all\",\"fullName\":\"前端全部项目\",\"contributors\":[\"wesleyyy0808\"]}]},{\"name\":\"HD\",\"fullName\":\"后端\",\"tasks\":[{\"name\":\"all\",\"fullName\":\"后端全部项目\",\"contributors\":[\"ddos-ling\"]}]},{\"name\":\"issue\",\"fullName\":\"issue\",\"tasks\":[{\"name\":\"issue\",\"fullName\":\"issue\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}]},{\"name\":\"bug\",\"fullName\":\"bug\",\"tasks\":[{\"name\":\"bug\",\"fullName\":\"bug\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}]},{\"name\":\"PR\",\"fullName\":\"pr\",\"tasks\":[{\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy0808\"]}]}]')
+    //     // return fetch('https://v.qq.com/cache/wuji_public/object?appid=_xy_tdesign&schemaid=contributor&schemakey=5d5bd1cc53f3489b90e7f0280c00368b').then(reponse => {
+    //     //     return reponse.json();
+    //     // }).then(res => {
+    //     //     return JSON.parse(res.data.find(n => n.project === device).data);
+    //     // }).catch(res => {
+    //     //     console.log('没有找到' + device + '在wuji', res)
+    //     //     return null
+    //     // })
+    // }
 
-    // var ran_result = {
-    //     "data":[{
-    //             "_id":"1",
-    //             "project":"all",
-    //             "data":
-                // '[{\"name\":\"QD\",\"fullName\":\"前端\",\"tasks\":[
-                    // {\"name\":\"all\",\"fullName\":\"前端全部项目\",\"contributors\":[\"wesleyyy0808\"]}]},
-                    // {\"name\":\"HD\",\"fullName\":\"后端\",\"tasks\":[
-                    //     {\"name\":\"all\",\"fullName\":\"后端全部项目\",\"contributors\":[\"ddos-ling\"]}]},
-                    //     {\"name\":\"issue\",\"fullName\":\"issue\",\"tasks\":[{\"name\":\"issue\",\"fullName\":\"issue\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}]},{\"name\":\"bug\",\"fullName\":\"bug\",\"tasks\":[{\"name\":\"bug\",\"fullName\":\"bug\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}]},{\"name\":\"PR\",\"fullName\":\"pr\",\"tasks\":[{\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy0808\"]}]}]'
-        //     }]
-        // }
-
-        let isissue = 'false'
+    let isissue = 'false'
+    let needhard = 'false'
+    let unmatch = 'false'
 
     const generatorContributors = async (project_name, issue_title) => {
         if (ReposMap[project_name].type === 'isComponent') {
             // const { device } = ReposMap[project_name];
             // const data = await getContributorsFromWuji(device);
             // const data = await getContributorsFromWuji();\
-            const data = JSON.parse('[{\"name\":\"QD\",\"fullName\":\"前端\",\"tasks\":[{\"name\":\"QD\",\"fullName\":\"前端全部项目\",\"contributors\":[\"wesleyyy0808\"]}]},{\"name\":\"HD\",\"fullName\":\"后端\",\"tasks\":[{\"name\":\"HD\",\"fullName\":\"后端全部项目\",\"contributors\":[\"ddos-ling\"]}]},{\"name\":\"issue\",\"fullName\":\"issue\",\"tasks\":[{\"name\":\"issue\",\"fullName\":\"issue\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}]},{\"name\":\"bug\",\"fullName\":\"bug\",\"tasks\":[{\"name\":\"bug\",\"fullName\":\"bug\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}]},{\"name\":\"PR\",\"fullName\":\"pr\",\"tasks\":[{\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy0808\"]}]}]')
+            var ranlist = `[
+                {\"name\":\"QD\",\"fullName\":\"前端\",\"tasks\":[
+                    {\"name\":\"QD\",\"fullName\":\"前端全部项目\",\"contributors\":[\"wesleyyy0808\"]}
+                ]},
+                {\"name\":\"HD\",\"fullName\":\"后端\",\"tasks\":[
+                    {\"name\":\"HD\",\"fullName\":\"后端全部项目\",\"contributors\":[\"ddos-ling\"]}
+                ]},
+                {\"name\":\"issue\",\"fullName\":\"issue\",\"tasks\":[
+                    {\"name\":\"issue\",\"fullName\":\"issue\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}
+                ]},
+                {\"name\":\"bug\",\"fullName\":\"bug\",\"tasks\":[
+                    {\"name\":\"bug\",\"fullName\":\"bug\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}
+                ]},
+                {\"name\":\"PR\",\"fullName\":\"pr\",\"tasks\":[
+                    {\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy0808\"]}
+                ]},
+                {\"name\":\"前端需求\",\"fullName\":\"QD需求\",\"tasks\":[
+                    {\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy0808\"]}
+                ]},
+                {\"name\":\"后端需求\",\"fullName\":\"HD需求\",\"tasks\":[
+                    {\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"ddos-ling\"]}
+                ]},
+                {\"name\":\"需求\",\"fullName\":\"QD需求\",\"tasks\":[
+                    {\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}
+                ]}
+            ]`
+            const data = JSON.parse()
             //截取issue title中的[]的内容
             let component = issue_title.match(/\[(\w+)\]/i);
             if (!component) {
                 console.error('没有在issue的title中找到组件');
+                unmatch = 'true'
                 return [];
             }
             //纯字母
@@ -8771,6 +8787,7 @@
             let componentData = data.find(n => n.name.toLocaleLowerCase() === component);
             if (!componentData) {
                 console.log('没有在list中找到对应name: ' + component, data)
+                unmatch = 'true'
                 return [];
             }
 
@@ -8781,6 +8798,9 @@
             //提交新功能，回复的内容不一样
             if (component === 'issue') {
                 isissue = 'true'
+            }
+            if (component === '需求') {
+                needhard = 'true'
             }
     
             return componentData.contributors;
@@ -8796,6 +8816,8 @@
         console.log(data);
         core.setOutput("contributors", data.join(','));
         core.setOutput("isissue", isissue);
+        core.setOutput("needhard", needhard);
+        core.setOutput("notmatchpeople", unmatch);
     }).catch(err => {
         console.log(err)
         core.setFailed("contributors", err);
