@@ -8773,7 +8773,7 @@
                     {\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}
                 ]}
             ]`
-            const data = JSON.parse()
+            const data = JSON.parse(ranlist)
             //截取issue title中的[]的内容
             let component = issue_title.match(/\[(\w+)\]/i);
             if (!component) {
