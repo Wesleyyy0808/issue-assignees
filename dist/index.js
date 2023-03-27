@@ -8779,7 +8779,7 @@
             if (!component) {
                 console.error('没有在issue的title中找到组件');
                 unmatch = 'true'
-                return [];
+                return [1];
             }
             //纯字母
             component = component[1].toLocaleLowerCase();
@@ -8788,7 +8788,7 @@
             if (!componentData) {
                 console.log('没有在list中找到对应name: ' + component, data)
                 unmatch = 'true'
-                return [];
+                return [2];
             }
 
             // const taskName = project_name.replace('tdesign-', '').replace('mobile-', '').replace('miniprogram', 'wx');
