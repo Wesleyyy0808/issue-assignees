@@ -8799,10 +8799,10 @@
             if (component === 'issue') {
                 isissue = 'true'
             }
-            if (component === '需求') {
+            if (component === '需求' || component === '前端需求' || component === '后端需求') {
                 needhard = 'true'
             }
-    
+
             return componentData.contributors;
 
         }else if (ReposMap[project_name].type === 'isDefault') {
