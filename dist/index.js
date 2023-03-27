@@ -8777,9 +8777,12 @@
             //截取issue title中的[]的内容
             let component = issue_title.match(/\[(\w+)\]/i);
             if (!component) {
-                console.error('没有在issue的title中找到组件');
-                unmatch = 'true'
-                return [1];
+                let component = issue_title.match(/\[[\u4e00-\u9fa5]+\]/i);
+                if (!component) {
+                    console.error('没有在issue的title中找到组件');
+                    unmatch = 'true'
+                    return [1];
+                }
             }
             //纯字母
             component = component[1].toLocaleLowerCase();
