@@ -8804,26 +8804,7 @@
             // })
         }
 
-        let a = `[
-            {\"name\":\"QD\",\"fullName\":\"前端\",\"tasks\":[
-                {\"name\":\"QD\",\"fullName\":\"前端全部项目\",\"contributors\":[\"wesleyyy0808\"]}
-            ]},
-            {\"name\":\"HD\",\"fullName\":\"后端\",\"tasks\":[
-                {\"name\":\"HD\",\"fullName\":\"后端全部项目\",\"contributors\":[\"ddos-ling\"]}
-            ]},
-            {\"name\":\"issue\",\"fullName\":\"issue\",\"tasks\":[
-                {\"name\":\"issue\",\"fullName\":\"issue\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}
-            ]},
-            {\"name\":\"bug\",\"fullName\":\"bug\",\"tasks\":[
-                {\"name\":\"bug\",\"fullName\":\"bug\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}
-            ]},
-            {\"name\":\"PR\",\"fullName\":\"pr\",\"tasks\":[
-                {\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy0808\"]}
-            ]}
-            {\"name\":\"TDL\",\"fullName\":\"ToDoList\",\"tasks\":[
-                {\"name\":\"TDL\",\"fullName\":\"ToDoList\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}
-            ]}
-        ]`
+        let a = '[{\"name\":\"QD\",\"fullName\":\"前端\",\"tasks\":[{\"name\":\"QD\",\"fullName\":\"前端全部项目\",\"contributors\":[\"wesleyyy0808\"]}]},{\"name\":\"HD\",\"fullName\":\"后端\",\"tasks\":[{\"name\":\"HD\",\"fullName\":\"后端全部项目\",\"contributors\":[\"ddos-ling\"]}]},{\"name\":\"issue\",\"fullName\":\"issue\",\"tasks\":[{\"name\":\"issue\",\"fullName\":\"issue\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}]},{\"name\":\"bug\",\"fullName\":\"bug\",\"tasks\":[{\"name\":\"bug\",\"fullName\":\"bug\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}]},{\"name\":\"PR\",\"fullName\":\"pr\",\"tasks\":[{\"name\":\"pr\",\"fullName\":\"pr\",\"contributors\":[\"wesleyyy0808\"]}]}{\"name\":\"TDL\",\"fullName\":\"ToDoList\",\"tasks\":[{\"name\":\"TDL\",\"fullName\":\"ToDoList\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}]},{\"name\":\"QDTDL\",\"fullName\":\"QDToDoList\",\"tasks\":[{\"name\":\"QDTDL\",\"fullName\":\"QDToDoList\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}]},{\"name\":\"HDTDL\",\"fullName\":\"HDToDoList\",\"tasks\":[{\"name\":\"HDTDL\",\"fullName\":\"HDToDoList\",\"contributors\":[\"wesleyyy0808\",\"ddos-ling\"]}]}]'
 
         let isissue = 'false'
 
