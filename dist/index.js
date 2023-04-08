@@ -8747,7 +8747,7 @@
             // const { device } = ReposMap[project_name];
             // const data = await getContributorsFromWuji(device);
             // const data = await getContributorsFromWuji();\
-            var ranlist = [
+            var data = [
                 {"name":"QD","fullName":"前端","tasks":[
                     {"name":"QD","fullName":"前端全部项目","contributors":["wesleyyy0808"]}
                 ]},
@@ -8773,7 +8773,7 @@
                     {"name":"HDTDL","fullName":"HDToDoList","contributors":["ddos-ling"]}
                 ]}
             ]
-            const data = JSON.parse(ranlist)
+            // const data = JSON.parse(ranlist)
             //截取issue title中的[]的内容
             let component = issue_title.match(/\[(\w+)\]/i);
             if (!component) {
